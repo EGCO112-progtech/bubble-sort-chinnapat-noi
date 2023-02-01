@@ -1,58 +1,48 @@
 // selection sort function module in C
 
-void display(int a[],int n){
+#include <stdio.h>
 
-    int i;
+void display(int a[], int n) {
 
-    for(i=0;i<n;i++)
-        printf("%5d",a[i]);
-    printf("\n");
-  
+int i;
+
+for (i = 0; i < n; i++)
+printf("%5d", a[i]);
+printf("\n");
 }
 
-void selectionSort(int data[], int length) 
-{ 
-	int i, j, m, mi; 
-	
-     display(data,length);
-     
-	
-} 
+void selectionSort(int data[], int length) {
+int i, j, m, mi;
 
-
-
-void insertion(int a[],int n){
-
-
+display(data, length);
 }
 
-void swap(int *a,int *b){
- int temp;
-  temp=*a;
-  *a=*b;
-  *b=temp;
-  
+void insertion(int a[], int n) {}
+
+void swap(int *a, int *b) {
+int temp;
+temp = *a;
+*a = *b;
+*b = temp;
 }
 
-void bubbleSort(int a[],int n){
+void bubbleSort(int a[], int n) {
 
-int i,j;
+int i, j;
 int sorted;
 // how may pair to compare?
-for(i=0;i<n-1;i++){
-  printf("Round %d\n",i);
-  sorted=0;
-  for(j=0;j<n-i-1;j++){
- if(a[j]>a[j+1])
-  {
-   swap(&a[j],&a[j+1]);
-   sorted=1;
-  }
-  display(a,n);
- }
-  if(sorted==0)break;
-  }
-  
+for (i = 0; i < n - 1; i++) {
+sorted = 0;
+for (j = 0; j < n - i - 1; j++) {
+if (a[j] > a[j + 1]) {
+swap(&a[j], &a[j + 1]);
+sorted = 1;
+}
+display(a, n);
+}
+if(sorted == 0)
+break;
+}
 }
 
 
